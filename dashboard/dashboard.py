@@ -43,9 +43,9 @@ def create_clustered_station_pollution_df(df):
     clustered_station_pollution_df["cluster"] = kmeans.fit_predict(clustered_station_pollution_df[["pollution_scaled"]])
     # Buat mapping untuk mengganti angka klaster dengan label yang lebih bermakna
     cluster_labels = {
-        0: "Polusi Sedang",
-        1: "Polusi Rendah",
-        2: "Polusi Tinggi"
+        0: "Polusi Tinggi",
+        1: "Polusi Sedang",
+        2: "Polusi Rendah"
     }
     # Ganti label klaster
     clustered_station_pollution_df["cluster_labels"] = clustered_station_pollution_df["cluster"].replace(cluster_labels)
@@ -98,7 +98,7 @@ with tab1:
     ax.set_ylabel("Stasiun")
     ax.set_title("Perbandingan Kualitas Udara Antar Stasiun (Berdasarkan Pollution Index)")
     ax.grid(axis="x", linestyle="--", alpha=0.7)
-    ax.legend(title='Cluster')
+    ax.legend()
     
     st.pyplot(fig)
 
