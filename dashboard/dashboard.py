@@ -64,7 +64,7 @@ max_date = all_df["date"].max()
 selected_station = 'Aotizhongxin'
 
 with st.sidebar:
-    st.image("air_pollution_img.jpg")
+    st.image("dashboard/air_pollution_img.jpg")
 
     start_date = st.date_input("Pilih Tanggal Awal", min_value=min_date, max_value=max_date, value=min_date)
     end_date = st.date_input("Pilih Tanggal Akhir", min_value=min_date, max_value=max_date, value=max_date)
