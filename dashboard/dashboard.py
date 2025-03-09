@@ -54,7 +54,7 @@ def create_clustered_station_pollution_df(df):
     return clustered_station_pollution_df
 
 @st.cache_data
-def load_data()
+def load_data():
     return pd.read_csv("dashboard/all_data.csv.gz", compression="gzip")
 
 all_df = load_data()
