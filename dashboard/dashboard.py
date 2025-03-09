@@ -53,7 +53,7 @@ def create_clustered_station_pollution_df(df):
     clustered_station_pollution_df = clustered_station_pollution_df.sort_values(by="pollution_index", ascending=False)
     return clustered_station_pollution_df
 
-all_df = pd.read_csv("all_data.csv.gz", compression='gzip')
+all_df = pd.read_csv("all_data.csv.gz", compression="gzip")
 all_df.sort_values(by=["station", "date","hour"], inplace=True)
 all_df.reset_index(inplace=True)
 
